@@ -184,6 +184,26 @@
           </div>
           <div class="to-top"><a href="https://matchinglike.jp/">トップページに戻る</a></div>
         </section>
+        <section class="table-section hayami mt_20" v-show="isSearch">
+          <h2>結果はこちら</h2>
+          <table class="w-100" v-if="matchSearchApps.length > 0">
+            <thead>
+              <tr>
+                <th>サービス名</th>
+                <th>会員数</th>
+                <th>目的</th>
+                <th>年齢層</th>
+                <th>種別</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="item in matchSearchApps" :key="src" v-html="item.trSource"></tr>
+            </tbody>
+          </table>
+          <div class="to-top">
+            <a href="index.html">トップページに戻る</a>
+          </div>
+        </section>
         <section class="review-section" v-show="!isSearch">
           <p class="name"><span class="takeda">武田悠</span><img class="ps-5" src="img/photo-reviewer.png"></p>
           <p class="content"> マッチングライクの編集長（27歳男性）。<br>
