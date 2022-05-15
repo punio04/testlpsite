@@ -57,7 +57,7 @@
     <main>
       <div id="app">
         <section class="banner-section"><img src="img/fv.png" class="w-100">
-          <div class="ranking">
+          <div class="ranking" v-show="!isSearch">
             <h2 class="ranking-title"><img src="img/f0832_1.png" alt="マッチングアプリ人気ランキングTOP5"></h2>
             <div class="icon-appname">
               <div><a href="https://pcmax.jp/pcm/lp.php?ad_id=rm181006"><img src="img/app_icon1.png" alt="PCMAX"></a>
@@ -184,12 +184,12 @@
           </div>
           <div class="to-top"><a href="https://matchinglike.jp/">トップページに戻る</a></div>
         </section>
-        <section class="review-section">
+        <section class="review-section" v-show="!isSearch">
           <p class="name"><span class="takeda">武田悠</span><img class="ps-5" src="img/photo-reviewer.png"></p>
           <p class="content"> マッチングライクの編集長（27歳男性）。<br>
             3年前からマッチングアプリを開始。現在では2ケタ数のマッチングサービスを調査＆リアルな情報を執筆中。悪い点も含めてとにかく真実を伝えるという想いで本サイトを監修しています。 </p>
         </section>
-        <section class="ranking-detail"><img src="img/title_2.png" class="w-100">
+        <section class="ranking-detail" v-show="!isSearch"><img src="img/title_2.png" class="w-100">
           <div class="unit">
             <div class="header"><img src="img/rank1.png" class="me-2"><a
                 href="https://pcmax.jp/pcm/?ad_id=presco"><span>PCMAX</span></a><a
@@ -1023,7 +1023,7 @@
             </p>
           </div>
         </section>
-        <section class="table-section hayami mt_20"><img src="img/title_4.png" class="w-100">
+        <section class="table-section hayami mt_20" v-show="!isSearch"><img src="img/title_4.png" class="w-100">
           <table class="w-100">
             <thead>
               <tr>
